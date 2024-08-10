@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateLength(inputString) {
+            const characters = inputString.split("");
+            let totalLength = 0;
+            characters.forEach(() => {
+                totalLength++;
+            });
+            return totalLength;
+        }
+    
+        const text1 = 'Hello';
+        const text2 = 'Abcd-efg';
+        console.log(`The length of the string '${text1}' is: ${calculateLength(text1)}`);
+        console.log(`The length of the string '${text2}' is: ${calculateLength(text2)}`);
+    </script>
+    
+</body>
+</html>

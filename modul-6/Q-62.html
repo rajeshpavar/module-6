@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div id="output"></div>
+    
+        <script>
+            function verifyPresence() {
+                const sentence = "JavaScript is a scripting language.";
+                const searchWord = "Script";
+                const isPresent = sentence.includes(searchWord);
+    
+                const message = isPresent
+                    ? `The sentence contains the term "${searchWord}".`
+                    : `The sentence does not contain the term "${searchWord}".`;
+    
+                document.getElementById('output').textContent = message;
+            }
+    
+            verifyPresence();
+        </script>
+    </body>
+    
+</body>
+</html>

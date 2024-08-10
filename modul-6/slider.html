@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+    width: 100%;
+    height: 600px;  
+    }
+  </style>
+<body>
+    
+  <div class="main">
+    <img class="img" src="./img/img 1 (1).png" width="100%" height="100%" alt="">
+    <img class="img"  src="./img/img 1 (2).png" width="100%" height="100%" alt="">
+    <img  class="img" src="./img/crater.png" width="100%" height="100%" alt="">
+    <img  class="img" src="./img/crater2.png" width="100%" height="100%" alt="">
+  </div>
+
+  <script>
+      
+    const img=document.getElementsByClassName('img');
+   let index=0;
+
+   for(let i=0;i<img.length;i++){
+     img[i].style.display='none'
+   };
+
+   img[index].style.display='block';
+
+   let slider=function(){
+    img[index].style.display='none';
+   index++;
+   
+   if(index==img.length){
+     index=0
+   }
+   img[index].style.display='block';
+   }
+
+setInterval(slider,1000);
+
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #2c2c2c;
+        }
+        h1{
+            color: #fff;
+            margin-left: 45%;
+        }
+        .main {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 10px;
+            left: 25%;
+            width: 50%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide:nth-child(1) {
+            background-color: #53f04e;
+        }
+
+        .slide:nth-child(2) {
+            background-color: #4e59f0;
+        }
+
+        .slide:nth-child(3) {
+            background-color: #cf64a2;
+        }
+
+        .slide:nth-child(4) {
+            background-color: #b4ffca;
+        }
+
+        .slide:nth-child(5) {
+            background-color: #4E9ECF;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javascript Slider</h1>
+    <div class="main">
+        <img class="slide" src="./img/img 1 (1).png" width="100%" height="100%" alt="">
+        <img class="slide"  src="./img/img 1 (2).png" width="100%" height="100%" alt="">
+        <img  class="slide" src="./img/crater.png" width="100%" height="100%" alt="">
+        <img  class="slide" src="./img/crater2.png" width="100%" height="100%" alt="">
+    </div>
+    <div class="btn-container">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.opacity = 1;
+                } else {
+                    slide.style.opacity = 0;
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+    </script>
+</body>
+
+</html>

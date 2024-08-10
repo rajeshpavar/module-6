@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // (i)
+        function printPattern() {
+  let pattern = '';
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      if (j % 2 === 0) {
+        pattern += '0 ';
+      } else {
+        pattern += '1 ';
+      }
+    }
+    pattern = pattern.trim(); 
+    pattern += '\n'; 
+  }
+  console.log(pattern);
+}
+
+printPattern();
+
+// (ii)
+
+function printAlphabetPattern() {
+  let pattern = '';
+  let charCode = 65; 
+
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      pattern += String.fromCharCode(charCode) + ' ';
+      charCode++;
+    }
+    pattern = pattern.trim(); 
+    pattern += '\n'; 
+  }
+  console.log(pattern);
+}
+
+printAlphabetPattern();
+
+// (iii)
+function printNumberPattern() {
+  let pattern = '';
+  let number = 1;
+
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      pattern += number + ' ';
+      number++;
+    }
+    pattern = pattern.trim();
+    pattern += '\n';
+  }
+  console.log(pattern);
+}
+
+printNumberPattern();
+
+// (iv)
+
+
+function printStarPattern() {
+  let pattern = '';
+
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+      pattern += '* ';
+    }
+    pattern = pattern.trim(); 
+    pattern += '\n'; 
+  }
+  console.log(pattern);
+}
+
+printStarPattern();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // Q.36 Write a program you have to make a summation of first and last Digit. 
+
+        function sumOfFirstAndLastDigit(num) {
+  let lastDigit = num % 10;
+  let firstDigit = num;
+
+  while (firstDigit >= 10) {
+    firstDigit = Math.floor(firstDigit / 10);
+  }
+
+  return firstDigit + lastDigit;
+}
+
+
+let number = 1234;
+console.log(`Sum of the first and last digits of ${number} is ${sumOfFirstAndLastDigit(number)}`);
+
+    </script>
+</body>
+</html>

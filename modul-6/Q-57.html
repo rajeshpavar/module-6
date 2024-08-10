@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 20px 12px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+  <button id="btn">Click Me...</button>
+    <script>
+  
+
+//   1. Mouse Events
+
+    // click:  when an element is clicked.
+    // dblclick:  when an element is double-clicked.
+    // mouseover:  when the mouse pointer is moved onto an element.
+    // mouseout:  when the mouse pointer is moved out of an element.
+    // mousedown:  when the mouse button is pressed down on an element.
+    // mouseup:  when the mouse button is released over an element.
+    // mousemove:  when the mouse pointer is moving while over an element.
+
+// 2. Keyboard Events
+
+// keydown: Fired when a key is pressed down.
+//     keyup: Fired when a key is released.
+//     keypress: Fired when a key is pressed down and held (but is deprecated and generally replaced by keydown or keyup).
+
+// 3 How to Use JavaScript Events
+
+// You can use JavaScript events by adding event listeners to elements. An event listener is a function that waits for a specific event to happen and then runs code when it does.
+
+       // example
+       let button = document.getElementById("btn");
+
+
+button.addEventListener("click", function() {
+    alert("Button is clicked!");
+});
+    </script>
+</body>
+
+</html>
